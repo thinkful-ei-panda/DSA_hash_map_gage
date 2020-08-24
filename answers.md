@@ -116,6 +116,24 @@ when str2 was called it pushed out the 1st call, since there was no were else  f
 ### Part 4: Remove duplicates
 Implement a function to delete all duplicated characters in a string and keep only the first occurrence of each character. For example, if the input is string “google”, the result after deletion is “gole”. Test your program with a sentence as well such as "google all that you think can think of".
 
+```
+const removeDuplicates = (str) =>{
+  let res ='';
+  for(let i = 0 ; i < str.length ; i++){
+    if(str[i] === ' '){
+      res+= str[i];
+      continue;
+    }
+    if(res.includes(str[i])){
+      continue;
+    }else{
+      res+= str[i];
+    }
+  }
+  return res;
+};
+```
+
 ### Part 5: Any permutation a palindrome
 Write an algorithm to check whether any anagram of some string is a palindrome. Given some string, "acecarr", the algorithm should return true, because the letters in "acecarr" can be rearranged to the anagram "racecar", which itself is a palindrome. In contrast, given the word "north", the algorithm should return false, because there's no anagram for "north" that would be a palindrome.
 

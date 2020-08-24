@@ -15,6 +15,23 @@ const STORE ={
     {"Ent" :"Treebeard"},
   ],
   log : console.log,
+  removeDuplicates : (str) => {
+    let res ='';
+    for(let i = 0 ; i < str.length ; i++){
+      if(str[i] === ' '){
+        res+= str[i];
+        continue;
+      }
+      if(res.includes(str[i])){
+        continue;
+      }else{
+        res+= str[i];
+      }
+    }
+    return res;
+  },
 };
+
+
 
 module.exports = {STORE,};

@@ -1,7 +1,7 @@
 const HashMap = require('../prework/hashMap');
 const {STORE} = require('../store/store');
 
-const {lordOfTheRingsCast, log} = STORE;
+const {lordOfTheRingsCast, log, removeDuplicates} = STORE;
 
 const main = () =>{
   const lotr = new HashMap;
@@ -20,4 +20,8 @@ const main = () =>{
 
 //log(`length of the lotr array before hashing is :${lordOfTheRingsCast.length}`);
 
-log(main());
+// log(main());
+
+
+
+log(removeDuplicates('google all that you think can think of'));
