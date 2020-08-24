@@ -10,22 +10,28 @@ Walk through the HashMap implementation in the curriculum and understand it well
 
 - For your hash map that you have created, set the MAX_LOAD_RATIO = 0.5 and SIZE_RATIO = 3.
 
-- Add the following items to your hash map: `{"Hobbit": "Bilbo"}`, `{"Hobbit": "Frodo"}`,
-
-- `{"Wizard": "Gandalf"}`, `{"Human": "Aragorn"}`, `{"Elf": "Legolas"}`, `{"Maiar": "The Necromancer"}`,
-
-- `{"Maiar": "Sauron"}`, `{"RingBearer": "Gollum"}`, `{"LadyOfLight": "Galadriel"}`, `{"HalfElven": "Arwen"}`,
-
-- `{"Ent": "Treebeard"}`
+- Add the following items to your hash map: `{"Hobbit": "Bilbo"}`, `{"Hobbit": "Frodo"}`, `{"Wizard": "Gandalf"}`, `{"Human": "Aragorn"}`, `{"Elf": "Legolas"}`, `{"Maiar": "The Necromancer"}`,`{"Maiar": "Sauron"}`, `{"RingBearer": "Gollum"}`, `{"LadyOfLight": "Galadriel"}`, `{"HalfElven": "Arwen"}`,`{"Ent": "Treebeard"}`
 
 - Print your hash map and notice the length and items that are hashed in your hash map. Have you hashed all the items you were asked to?
 
-- Retrieve the value that is hashed in the key `"Maiar"` and Hobbit.
+length is 9 but also 8? when it should be 11. 
+so no and also there seems to be a bug where one of the object will come up undefined? 
+
+- Retrieve the value that is hashed in the key `"Maiar"` and `Hobbit`.
+
+that took long then i wish to admit  :c 
+`maily because inserting that values above`Correctly`too a min to find out`
 
 - What are the values of `Maiar` and `Hobbit` that you have? Is there a discrepancy? Explain your answer.
 
+`Maiar =  Sauron`,
+`Hobbit = Frodo`
+
 - What is the capacity of your hash table after you have hashed all the above items? Explain your answer.
 
+8 
+
+because that is the default value set in the hashMaps constructor 
 
 
 
