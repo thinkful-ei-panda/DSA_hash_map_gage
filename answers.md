@@ -56,6 +56,47 @@ const WhatDoesThisDo = function(){
     console.log(map2.get(str3));
 }
 ```
+###### comments
+```
+/*nameing the function*/
+const WhatDoesThisDo = function(){
+
+    /*setting values*/
+
+    let str1 = 'Hello World.';
+    let str2 = 'Hello World.';
+
+    /*making new instance of hashmap*/
+
+    let map1 = new HashMap();
+
+    /*inserting values*/
+
+    map1.set(str1,10);
+    map1.set(str2,20);
+
+    /*making new instance of another (but the same) hashmap*/
+
+    let map2 = new HashMap();
+
+    /*setting values*/
+
+    let str3 = str1; //hello world
+    let str4 = str2; //hello world
+
+    /*setting values for the new...er hashmap*/
+
+    map2.set(str3,20);
+    map2.set(str4,10);
+
+    console.log(map1.get(str1)); // = 20
+    console.log(map2.get(str3)); // = 10
+}
+
+```
+i'm guessing since str1 was the 1st in
+when str2 was called it pushed out the 1st call, since there was no were else  for it to go and, there can only be one item with said key value in a hash map from my understanding. 
+
 
 
 ### Part 3: Demonstrate understanding of Hash maps
