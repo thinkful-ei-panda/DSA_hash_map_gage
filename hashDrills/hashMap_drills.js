@@ -1,7 +1,7 @@
 const HashMap = require('../prework/hashMap');
 const {STORE} = require('../store/store');
 
-const {lordOfTheRingsCast, log, removeDuplicates} = STORE;
+const {lordOfTheRingsCast, log, anagramPalindrome , palindrome} = STORE;
 
 const main = () =>{
   const lotr = new HashMap;
@@ -22,6 +22,8 @@ const main = () =>{
 
 // log(main());
 
+// log(removeDuplicates('google all that you think can think of'));
 
 
-log(removeDuplicates('google all that you think can think of'));
+
+log(anagramPalindrome('acecarr'));

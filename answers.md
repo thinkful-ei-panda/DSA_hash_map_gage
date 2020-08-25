@@ -115,7 +115,7 @@ when str2 was called it pushed out the 1st call, since there was no were else  f
 
 ### Part 4: Remove duplicates
 Implement a function to delete all duplicated characters in a string and keep only the first occurrence of each character. For example, if the input is string “google”, the result after deletion is “gole”. Test your program with a sentence as well such as "google all that you think can think of".
-
+[]
 ```
 const removeDuplicates = (str) =>{
   let res ='';
@@ -135,10 +135,39 @@ const removeDuplicates = (str) =>{
 ```
 
 ### Part 5: Any permutation a palindrome
-Write an algorithm to check whether any anagram of some string is a palindrome. Given some string, "acecarr", the algorithm should return true, because the letters in "acecarr" can be rearranged to the anagram "racecar", which itself is a palindrome. In contrast, given the word "north", the algorithm should return false, because there's no anagram for "north" that would be a palindrome.
+Write an algorithm to check whether any anagram of some string is a palindrome. Given some string, "acecarr", the algorithm should return `true`, because the letters in "acecarr" can be rearranged to the anagram "racecar", which itself is a palindrome. In contrast, given the word "north", the algorithm should return `false`, because there's no anagram for "north" that would be a palindrome.
+
+```
+  anagramPalindrome : (str) => {
+    str = str.toLowerCase().replace(/[^a-zA-Z0-9]/g,'');
+    if(typeof str !== 'string'){
+      throw new Error('not a string');
+    }
+    let ana = anagram(str);
+    for(let j = 0; j < ana.length ; j++){
+      let l = str.length,
+        i = 0,
+        c = 0;
+
+      while (i < str.length){
+        console.log(ana[j], c );
+        if(ana[j][i] === ana[j][l - 1]) c++;
+        i++, l--;
+      } 
+      if(c === str.length ){
+        return true;
+      }
+    }
+    return false;
+  },
+```
 
 ### Part 6: Anagram grouping
 Write an algorithm to group a list of words into anagrams. For example, if the input was `['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']`, the output should be: [`['east', 'teas', 'eats']`, `['cars', 'arcs']`, `['acre', 'race']`].
+
+```
+
+```
 
 ### Part 7: Separate Chaining
 Write another hash map implementation as above, but use separate chaining as the collision resolution mechanism.
