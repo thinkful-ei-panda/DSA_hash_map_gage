@@ -1,4 +1,5 @@
 const HashMap = require('../prework/hashMap');
+const HashMap_w_chains = require('./hashMap_w_chain/hashMapWChain');
 const {STORE} = require('../store/store');
 
 const {lordOfTheRingsCast, log, anagramPalindrome , palindrome , anagramArray} = STORE;
@@ -55,4 +56,22 @@ const anagramGrouping = (arr) => {
   return res;
 };
 
-log(anagramGrouping(anagramArray));
+// log(anagramGrouping(anagramArray));
+
+
+
+const chain = () => {
+  const lotr = new HashMap_w_chains;
+
+  lotr.MAX_LOAD_RATIO = 0.5,
+  lotr.SIZE_RATIO = 3;
+  
+  for(let i = 0 ; i < lordOfTheRingsCast.length ; i++){
+    for(let j in lordOfTheRingsCast[i])
+      lotr.set(j,lordOfTheRingsCast[i][j]);
+  }
+
+  return lotr;
+};
+
+log(chain());

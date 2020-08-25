@@ -191,3 +191,43 @@ const anagramGrouping = (arr) => {
 Write another hash map implementation as above, but use separate chaining as the collision resolution mechanism.
 
 Test your hash map with the same values from the `lotr` hash map.
+
+only changes being that of adding "make head next if index has value"..
+
+gg
+
+
+```
+  set(key, value) {
+  
+    const loadRatio = (this.length + this._deleted + 1) / this._capacity ;
+    if(loadRatio > HashMap_w_chains.MAX_LOAD_RATIO) {
+      this._resize(this._capacity * HashMap_w_chains.SIZE_RATIO);
+    }
+    /*Find the slot where this key should be in [like how i use to use the find function to get index
+      of linked lists] */
+    const index = this._findSlot(key);
+  
+    if(!this._hashTable[index]){
+      this.length++;
+      this._hashTable[index] = {
+        key,
+        value,
+        next : null,
+        DELETED : false
+      };
+    }else{
+      let temp = this._hashTable[index];
+      this._hashTable[index] = {
+        key,
+        value,
+        next : temp,
+        DELETED : false
+      };
+    }
+  }
+```
+
+time for bed now 
+
+[eh](/img/deadinsidecoding.jpg)
