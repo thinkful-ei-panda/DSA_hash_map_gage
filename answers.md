@@ -107,11 +107,11 @@ when str2 was called it pushed out the 1st call, since there was no were else  f
 
 - 1) Show your hash map after the insertion of keys 10, 22, 31, 4, 15, 28, 17, 88, 59 into a hash map of length 11 using open addressing and a hash function k mod m, where k is the key and m is the length.
 
-[part-1](/img/part-1_of_4_hash_map.png)
+![part-1](/img/part-1_of_4_hash_map.png)
 
  -2) Show your hash map after the insertion of the keys 5, 28, 19, 15, 20, 33, 12, 17, 10 into the hash map with collisions resolved by separate chaining. Let the hash table have a length m = 9, and let the hash function be k mod m.
 
-[par-2](/img/part_2_of_part_4_for_hash_maps.png)
+![par-2](/img/part_2_of_part_4_for_hash_maps.png)
 
 ### Part 4: Remove duplicates
 Implement a function to delete all duplicated characters in a string and keep only the first occurrence of each character. For example, if the input is string “google”, the result after deletion is “gole”. Test your program with a sentence as well such as "google all that you think can think of".
@@ -230,4 +230,4 @@ gg
 
 time for bed now 
 
-[eh](/img/deadinsidecoding.jpg)
+![eh](/img/deadinsidecoding.jpg)
