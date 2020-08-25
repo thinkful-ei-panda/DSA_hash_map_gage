@@ -166,7 +166,25 @@ Write an algorithm to check whether any anagram of some string is a palindrome. 
 Write an algorithm to group a list of words into anagrams. For example, if the input was `['east', 'cars', 'acre', 'arcs', 'teas', 'eats', 'race']`, the output should be: [`['east', 'teas', 'eats']`, `['cars', 'arcs']`, `['acre', 'race']`].
 
 ```
+const anagramGrouping = (arr) => {
 
+  let res = [], obj = {};
+
+  for(let i = 0 ; i < arr.length ; i ++){
+
+    let temp; 
+    temp = arr[i].split('').sort().join('');
+
+    if(!obj[temp]){
+      obj[temp] = [];
+    }
+    obj[temp].push(arr[i]);
+  }
+  for(let j in obj){
+    res.push(obj[j]);
+  }
+  return res;
+};
 ```
 
 ### Part 7: Separate Chaining

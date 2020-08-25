@@ -14,6 +14,15 @@ const STORE ={
     {"HalfElven" : "Arwen"},
     {"Ent" :"Treebeard"},
   ],
+  anagramArray : [
+    'east',
+    'cars',
+    'acre',
+    'arcs',
+    'teas',
+    'eats',
+    'race'
+  ],
   log : console.log,
   removeDuplicates : (str) => {
     let res ='';
